@@ -9,7 +9,7 @@ Permite a modelos de lenguaje (Claude, etc.) consultar documentos tributarios, f
 | Tool | Descripción |
 |------|-------------|
 | `get_user_info` | Info del usuario autenticado (nombre, email, estado) |
-| `get_certificate_info` | Estado del certificado digital (vencimiento, titular) |
+| `get_certificate_info` | Si la empresa tiene certificado digital válido para firmar (`has_valid_certificate`) |
 | `list_documents` | Listar DTEs con filtros (tipo, estado, fechas, paginación) |
 | `get_document` | Detalle de un documento por ID |
 | `get_document_stats` | Estadísticas: totales emitidos, montos, por tipo DTE |
