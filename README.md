@@ -10,11 +10,15 @@ Permite a modelos de lenguaje (Claude, etc.) consultar documentos tributarios, f
 |------|-------------|
 | `get_user_info` | Info del usuario autenticado (nombre, email, estado) |
 | `get_certificate_info` | Si la empresa tiene certificado digital válido para firmar (`has_valid_certificate`) |
+| `list_businesses` | Empresas del usuario (sin el certificado ni su contraseña) |
+| `get_business_detail` | Detalle de una empresa por ID (sin el certificado ni su contraseña) |
 | `list_documents` | Listar DTEs con filtros (tipo, estado, fechas, paginación) |
 | `get_document` | Detalle de un documento por ID |
 | `get_document_stats` | Estadísticas: totales emitidos, montos, por tipo DTE |
 | `get_numeration_summary` | Resumen de folios disponibles por tipo |
 | `get_last_folio` | Último folio usado para un tipo de DTE |
+| `get_dte_balance` | Modo de facturación y cupo del plan (o consumo on-demand) del mes |
+| `list_purchases` | Documentos de compra recibidos y su acuse (`/purchase-acknowledgments`) |
 
 ## Instalación
 

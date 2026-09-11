@@ -5,8 +5,9 @@ export const listPurchases: Tool = {
   definition: {
     name: "list_purchases",
     description:
-      "Lista las facturas de compra recibidas de proveedores (libro de compras). " +
-      "Retorna RUT emisor, razón social, monto, tipo DTE y fecha. " +
+      "Lista los documentos de compra recibidos de proveedores y su acuse de recibo " +
+      "(GET /purchase-acknowledgments). Retorna folio, RUT y razón social del emisor, " +
+      "monto total, tipo DTE, fecha de emisión y acción registrada (accion_doc), paginado. " +
       "Usar cuando el cliente pregunta por sus compras o facturas recibidas.",
     inputSchema: {
       type: "object" as const,
@@ -48,6 +49,6 @@ export const listPurchases: Tool = {
     if (args.to_date) params.to_date = args.to_date as string;
     if (args.page) params.page = String(args.page);
     if (args.limit) params.limit = String(args.limit);
-    return api.get("/api/v1/purchases", params);
+    return api.get("/api/v1/purchase-acknowledgments", params);
   },
 };

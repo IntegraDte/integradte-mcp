@@ -6,7 +6,8 @@ export const listBusinesses: Tool = {
     name: "list_businesses",
     description:
       "Lista todas las empresas registradas del usuario. " +
-      "Retorna RUT, razón social, giro, estado y si tiene certificado digital cargado. " +
+      "Retorna RUT, razón social, giro, estado y metadatos del certificado digital " +
+      "(vencimiento, fecha de carga), nunca el certificado ni su contraseña. " +
       "Usar cuando el cliente pregunta cuántas empresas tiene o cuáles son.",
     inputSchema: {
       type: "object" as const,
