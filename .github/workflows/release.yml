@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  # Disparo manual: changesets publica cualquier versión que falte en npm. Sirve cuando
+  # el release se mergeó pero la publicación falló (p. ej. token de npm vencido).
+  workflow_dispatch:
 
 permissions:
   contents: write
