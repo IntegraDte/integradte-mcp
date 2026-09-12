@@ -7,7 +7,9 @@ export const getBusinessDetail: Tool = {
     description:
       "Obtiene el detalle de una empresa específica: RUT, razón social, giro comercial, " +
       "dirección, comuna, estado, resolución SII, ambiente (is_prod) y metadatos del certificado " +
-      "digital (nombre de archivo, sujeto, vencimiento, fecha de carga). Nunca retorna el " +
+      "digital (nombre de archivo, sujeto, vencimiento, fecha de carga). Incluye la recarga " +
+      "automática de folios por tipo DTE: lowStockThresholds (umbral de folios disponibles) y " +
+      "lowStockRequestQuantities (cuántos folios se solicitan al alcanzarlo). Nunca retorna el " +
       "certificado ni su contraseña; para saber si puede firmar usar get_certificate_info. " +
       "Usar cuando el cliente pregunta por los datos de una empresa en particular.",
     inputSchema: {
