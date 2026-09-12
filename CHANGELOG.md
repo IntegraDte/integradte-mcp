@@ -1,5 +1,11 @@
 # @integradte/mcp
 
+## 1.0.5
+
+### Patch Changes
+
+- 02b597a: `get_business_detail` describes the automatic folio refill settings the API returns with the business: `lowStockThresholds` (available-folio threshold per DTE type) and `lowStockRequestQuantities` (how many folios are requested when it is reached). The MCP stays read-only; those settings are changed through `PATCH /api/v1/numerations/low-stock`.
+
 ## 1.0.4
 
 ### Patch Changes
